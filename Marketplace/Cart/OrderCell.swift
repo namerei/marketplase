@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CartProductCell: UITableViewCell {
+class OrderCell: UITableViewCell {
     
     private lazy var image: UIImageView = {
         let image = UIImageView(image: UIImage(systemName: "tshirt"))

@@ -16,14 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let categoryVC = CategoriesViewController()
-        let cartVC = CartViewController()
+        let cartVC = OrdersViewController()
 
         let navigationController = UINavigationController(rootViewController: categoryVC)
         
         categoryVC.tabBarItem = UITabBarItem(title: "Categories",
                                              image: UIImage(systemName: "magnifyingglass.circle"),
                                              selectedImage: UIImage(systemName: "magnifyingglass.circle.fill"))
-        cartVC.tabBarItem = UITabBarItem(title: "Cart",
+        cartVC.tabBarItem = UITabBarItem(title: "Orders",
                                          image: UIImage(systemName: "cart"),
                                          selectedImage: UIImage(systemName: "cart.fill"))
         

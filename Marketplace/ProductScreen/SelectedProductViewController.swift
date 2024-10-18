@@ -84,8 +84,8 @@ class SelectedProductViewController: UIViewController {
     
     @objc private func addToCartTapped() {
         guard let product = selectedProduct else { return }
-        let cartVC = tabBarController?.viewControllers?[1] as? CartViewController
-        cartVC?.updateTableViewElements(product: product)
+        let cartVC = tabBarController?.viewControllers?[1] as? OrdersViewController
+        cartVC?.updateCart(with: product)
         showCartAlert()
     }
     

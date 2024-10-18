@@ -16,8 +16,8 @@
 		5B1302A8290432C90099D1B8 /* ProductDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B1302A6290432C90099D1B8 /* ProductDataStorage.xcdatamodeld */; };
 		5B1302BC2904399B0099D1B8 /* ProductData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1302BA2904399B0099D1B8 /* ProductData+CoreDataProperties.swift */; };
 		5B9498CC28EF0317004F01B0 /* SelectedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9498CB28EF0317004F01B0 /* SelectedProductViewController.swift */; };
-		5B9498CE28EF17D6004F01B0 /* CartProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9498CD28EF17D6004F01B0 /* CartProductCell.swift */; };
-		5BB3847D28E594BC00872490 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3847C28E594BC00872490 /* CartViewController.swift */; };
+		5B9498CE28EF17D6004F01B0 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9498CD28EF17D6004F01B0 /* OrderCell.swift */; };
+		5BB3847D28E594BC00872490 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3847C28E594BC00872490 /* OrdersViewController.swift */; };
 		5BB3847F28E59DB100872490 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3847E28E59DB100872490 /* CategoryCell.swift */; };
 		5BDB690A28EC686800CE1D08 /* ProductsInCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB690928EC686800CE1D08 /* ProductsInCategoryViewController.swift */; };
 		5BDB690C28EC6C5700CE1D08 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB690B28EC6C5700CE1D08 /* ProductCell.swift */; };
@@ -36,8 +36,8 @@
 		5B1302A7290432C90099D1B8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5B1302BA2904399B0099D1B8 /* ProductData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5B9498CB28EF0317004F01B0 /* SelectedProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedProductViewController.swift; sourceTree = "<group>"; };
-		5B9498CD28EF17D6004F01B0 /* CartProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCell.swift; sourceTree = "<group>"; };
-		5BB3847C28E594BC00872490 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		5B9498CD28EF17D6004F01B0 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		5BB3847C28E594BC00872490 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		5BB3847E28E59DB100872490 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		5BDB690928EC686800CE1D08 /* ProductsInCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsInCategoryViewController.swift; sourceTree = "<group>"; };
 		5BDB690B28EC6C5700CE1D08 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		5B9498CF28EF17DA004F01B0 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				5BB3847C28E594BC00872490 /* CartViewController.swift */,
-				5B9498CD28EF17D6004F01B0 /* CartProductCell.swift */,
+				5BB3847C28E594BC00872490 /* OrdersViewController.swift */,
+				5B9498CD28EF17D6004F01B0 /* OrderCell.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -207,11 +207,11 @@
 			files = (
 				FA17D8212CC2DE660012B6BD /* Model.swift in Sources */,
 				5BDB690A28EC686800CE1D08 /* ProductsInCategoryViewController.swift in Sources */,
-				5BB3847D28E594BC00872490 /* CartViewController.swift in Sources */,
+				5BB3847D28E594BC00872490 /* OrdersViewController.swift in Sources */,
 				5BDB690C28EC6C5700CE1D08 /* ProductCell.swift in Sources */,
 				5B02EC5C28E4234300124D5B /* CategoriesViewController.swift in Sources */,
 				5B02EC5828E4234300124D5B /* AppDelegate.swift in Sources */,
-				5B9498CE28EF17D6004F01B0 /* CartProductCell.swift in Sources */,
+				5B9498CE28EF17D6004F01B0 /* OrderCell.swift in Sources */,
 				5B02EC5A28E4234300124D5B /* SceneDelegate.swift in Sources */,
 				5B9498CC28EF0317004F01B0 /* SelectedProductViewController.swift in Sources */,
 				5BB3847F28E59DB100872490 /* CategoryCell.swift in Sources */,
