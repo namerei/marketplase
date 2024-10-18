@@ -13,10 +13,11 @@ class CategoryViewController: UIViewController {
 
     let categories: [CategoryCell] = [
         CategoryCell(iconCategory: "👕",
-                     description: "Men's clothes",
-                     jsonRequest: "5/products"),
+                     description: "Clothes",
+                     jsonRequest: "1/products")
+        ,
         CategoryCell(iconCategory: "👚",
-                     description: "Women's clothes",
+                     description: "Furniture",
                      jsonRequest: "3/products"
                     ),
         CategoryCell(iconCategory: "🖥",
@@ -24,7 +25,10 @@ class CategoryViewController: UIViewController {
                      jsonRequest: "2/products"),
         CategoryCell(iconCategory: "💎",
                      description: "Shoes",
-                     jsonRequest: "4/products")
+                     jsonRequest: "4/products"),
+        CategoryCell(iconCategory: "🎱",
+                     description: "Miscellaneous",
+                     jsonRequest: "5/products")
     ]
     
     private lazy var collectionView: UICollectionView = {

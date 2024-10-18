@@ -136,10 +136,14 @@ class CategoryProductViewController: UIViewController {
     ){
         runQueue.async {
             do {
-                let image = self.downloadImage(urlString: imageStringURL)
-                print("___image url:", imageStringURL)
-                completionQueue.async { completion(image, nil) }
-                }
+                let noImageURL = "https://i.imgur.com/uqoohRT.png"
+                
+                let image = self.downloadImage(urlString: imageStringURL.first == "[" ?  noImageURL : imageStringURL)
+                
+                    completionQueue.async {
+                        completion(image, nil)
+                    }
+            }
         }
     }
     private func downloadImage(urlString: String) -> UIImage? {
