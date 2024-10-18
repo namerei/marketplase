@@ -7,20 +7,22 @@
 
 import UIKit
 
+import UIKit
+
 class OrderCell: UITableViewCell {
     
-    private lazy var image: UIImageView = {
-        let image = UIImageView(image: UIImage(systemName: "tshirt"))
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
-        return image
+    private lazy var productImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(systemName: "tshirt"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.textColor = .black
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.numberOfLines = 3
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -38,7 +40,7 @@ class OrderCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(image)
+        contentView.addSubview(productImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(priceLabel)
         
@@ -50,25 +52,27 @@ class OrderCell: UITableViewCell {
     }
     
     private func setupConstraints() {
-        image.widthAnchor.constraint(equalToConstant: contentView.frame.width/4).isActive = true
-        image.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
-        image.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        image.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
-        
-        priceLabel.widthAnchor.constraint(equalToConstant: contentView.frame.width/4).isActive = true
-        priceLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        priceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
-        priceLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5).isActive = true
-        
-        titleLabel.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 10).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor, constant: -10).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        NSLayoutConstraint.activate([
+            productImageView.widthAnchor.constraint(equalToConstant: contentView.frame.width / 4),
+            productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+            productImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            productImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            priceLabel.widthAnchor.constraint(equalToConstant: contentView.frame.width / 4),
+            priceLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            priceLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            priceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            titleLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: priceLabel.leadingAnchor, constant: -10),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
     }
     
-    func configure(_ viewModel: ProductData) {
+    func configure(with viewModel: ProductData) {
         titleLabel.text = viewModel.productTitle
         priceLabel.text = (viewModel.productPrice ?? "") + "$"
-        image.image = UIImage(data: viewModel.productImage ?? Data())
+        productImageView.image = UIImage(data: viewModel.productImage ?? Data())
     }
 }

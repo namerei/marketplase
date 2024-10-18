@@ -38,7 +38,7 @@ class OrdersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Shopping Cart"
+//        title = "Shopping Cart"
         
         setupTableView()
         setupConstraints()
@@ -110,7 +110,7 @@ extension OrdersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerLabel = UILabel()
         headerLabel.frame = CGRect(x: 15, y: 5, width: tableView.frame.width - 10, height: 40)
-        headerLabel.text = "Shopping Cart 🛒"
+        headerLabel.text = "Orders  🛒"
         headerLabel.textAlignment = .center
         headerLabel.font = .systemFont(ofSize: 25, weight: .bold)
         headerLabel.textColor = .black
@@ -132,7 +132,7 @@ extension OrdersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let productData = fetchedResultsController.object(at: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! OrderCell
-        cell.configure(productData)
+        cell.configure(with: productData)
         return cell
     }
     
