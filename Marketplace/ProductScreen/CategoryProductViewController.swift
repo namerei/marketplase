@@ -19,7 +19,7 @@ class CategoryProductViewController: UIViewController {
         tableView.allowsSelection = true
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.separatorColor = .systemGray4
-        tableView.rowHeight = view.frame.height/2
+        tableView.rowHeight = view.frame.height/2.3
         
         return tableView
     }()
@@ -28,6 +28,7 @@ class CategoryProductViewController: UIViewController {
         let indicator = UIActivityIndicatorView(frame: CGRect(x: view.frame.width/2 - 75, y: 40, width: 150, height: 150))
         return indicator
     }()
+    
 // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +129,7 @@ class CategoryProductViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
     private func asyncLoadImage(
         imageStringURL: String,
         runQueue: DispatchQueue,
@@ -146,6 +148,7 @@ class CategoryProductViewController: UIViewController {
             }
         }
     }
+    
     private func downloadImage(urlString: String) -> UIImage? {
         guard
             let url = URL(string: urlString),
@@ -159,6 +162,7 @@ class CategoryProductViewController: UIViewController {
         return UIImage(data: data)
     }
 }
+
 // MARK: - TableViewDelegate
 extension CategoryProductViewController: UITableViewDelegate {
     
@@ -177,10 +181,13 @@ extension CategoryProductViewController: UITableViewDataSource {
         products.count
     }
     
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        300
+//    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let productVC = ProductViewController()
         productVC.product = products[indexPath.row]
-        navigationController?.pushViewController(productVC,
-                                                 animated: true)
+        navigationController?.pushViewController(productVC, animated: true)
     }
 }

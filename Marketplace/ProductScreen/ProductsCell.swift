@@ -39,6 +39,13 @@ class ProductsCell: UITableViewCell {
     private lazy var productImage: UIImageView = {
         let image = UIImageView(image: UIImage(systemName: "tshirt"))
         image.contentMode = .scaleAspectFit
+        image.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            image.widthAnchor.constraint(equalToConstant: 230),
+            image.heightAnchor.constraint(equalToConstant: 230)
+        ])
+        
         return image
     }()
     
@@ -47,9 +54,10 @@ class ProductsCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 1
-        stackView.contentMode = .scaleToFill
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
+        stackView.contentMode = .scaleAspectFit
+//        stackView.distribution = .fillEqually
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
         stackView.addArrangedSubview(productTitleLabel)
         stackView.addArrangedSubview(productImage)
         stackView.addArrangedSubview(productPriceLabel)
@@ -60,8 +68,8 @@ class ProductsCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(stackView)
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20).isActive = true
         stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10).isActive = true
         stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10).isActive = true
     }
@@ -73,7 +81,7 @@ class ProductsCell: UITableViewCell {
     func configure(_ viewModel: Product) {
         print(viewModel.productTitle)
         productTitleLabel.text = viewModel.productTitle
-        productPriceLabel.text = viewModel.productPrice + "$"
+        productPriceLabel.text = viewModel.productPrice + " $"
         productImage.image = viewModel.productImage
     }
     
