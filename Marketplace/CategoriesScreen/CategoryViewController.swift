@@ -23,7 +23,7 @@ class CategoryViewController: UIViewController {
                      description: "Electronics",
                      jsonRequest: "2/products"),
         CategoryCell(iconCategory: "💎",
-                     description: "Jeweliry",
+                     description: "Shoes",
                      jsonRequest: "4/products")
     ]
     
