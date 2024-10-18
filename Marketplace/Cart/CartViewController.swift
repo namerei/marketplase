@@ -51,10 +51,12 @@ class CartViewController: UIViewController {
     }
     
     private func setupContstraints() {
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        
     }
     
     func updateTableViewElements(product: Product) {
@@ -91,7 +93,9 @@ extension CartViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.frame = CGRect.init(x: 15, y: 5, width: tableView.frame.width-10, height: tableView.frame.height-10)
-                label.text = "Cart"
+        label.text = "Cart  🛒"
+        label.textAlignment = .center
+        
         label.font = .systemFont(ofSize: 25, weight: .bold)
         label.textColor = .black
         return label

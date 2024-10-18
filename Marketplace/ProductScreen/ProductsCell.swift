@@ -7,13 +7,6 @@
 
 import UIKit
 
-struct Product {
-    var productTitle: String
-    var productPrice: String
-    var productDescription: String
-    var productURLImage: String
-    var productImage: UIImage
-}
 
 class ProductsCell: UITableViewCell {
     

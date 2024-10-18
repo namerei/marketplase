@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct CategoryCell {
-    var iconCategory: String
-    var description: String
-    var jsonRequest: String
-}
 
 class CategoriesCell: UICollectionViewCell {
     

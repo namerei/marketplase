@@ -24,6 +24,7 @@
 		5BB3847F28E59DB100872490 /* CatgoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3847E28E59DB100872490 /* CatgoriesCell.swift */; };
 		5BDB690A28EC686800CE1D08 /* CategoryProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB690928EC686800CE1D08 /* CategoryProductViewController.swift */; };
 		5BDB690C28EC6C5700CE1D08 /* ProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB690B28EC6C5700CE1D08 /* ProductsCell.swift */; };
+		FA17D8212CC2DE660012B6BD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17D8202CC2DE660012B6BD /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		5BB3847E28E59DB100872490 /* CatgoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatgoriesCell.swift; sourceTree = "<group>"; };
 		5BDB690928EC686800CE1D08 /* CategoryProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductViewController.swift; sourceTree = "<group>"; };
 		5BDB690B28EC6C5700CE1D08 /* ProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCell.swift; sourceTree = "<group>"; };
+		FA17D8202CC2DE660012B6BD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		5B02EC5628E4234300124D5B /* Marketplace */ = {
 			isa = PBXGroup;
 			children = (
+				FA17D8202CC2DE660012B6BD /* Model.swift */,
 				5B9498CF28EF17DA004F01B0 /* Cart */,
 				5BDB690828EC685600CE1D08 /* ProductScreen */,
 				5BDB690728EC683700CE1D08 /* CategoriesScreen */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA17D8212CC2DE660012B6BD /* Model.swift in Sources */,
 				5BDB690A28EC686800CE1D08 /* CategoryProductViewController.swift in Sources */,
 				5BB3847D28E594BC00872490 /* CartViewController.swift in Sources */,
 				5BDB690C28EC6C5700CE1D08 /* ProductsCell.swift in Sources */,
