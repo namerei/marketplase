@@ -9,7 +9,6 @@ import UIKit
 
 class ProductViewController: UIViewController {
     var product: Product?
-   // let cartVC = CartViewController()
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
@@ -77,7 +76,6 @@ class ProductViewController: UIViewController {
     }
     
     @objc private func addToCart() {
-        //print("Add to cart item")
         let vc = tabBarController?.viewControllers?[1] as? CartViewController
         vc?.updateTableViewElements(product: product!)
         showAddCartAlert()
@@ -95,32 +93,21 @@ class ProductViewController: UIViewController {
     }
     
     private func setupConstraints() {
-        // image constraints
         image.heightAnchor.constraint(equalToConstant: 300).isActive = true
         image.topAnchor.constraint(equalTo: view.topAnchor, constant: 115).isActive = true
-        //image.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(view.frame.height/3)).isActive = true
         image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         image.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         
-        // price constraints
         priceLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         priceLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 15).isActive = true
-        //priceLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         priceLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         
-        // button constraints
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        //button.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 5).isActive = true
         button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -95).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         
-        // description constraints
-//        descriptionLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: -5).isActive = true
-//        descriptionLabel.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -5).isActive = true
-//        descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-//        descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         scrollView.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: -5).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -5).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true

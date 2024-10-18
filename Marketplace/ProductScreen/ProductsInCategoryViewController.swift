@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CategoriesViewController: UIViewController {
+class ProductsInCategoryViewController: UIViewController {
     private let cellIdentifier: String = "ProductCell"
     var selectedCategoryTitle: String?
     private var productList: [Product] = []
@@ -47,7 +47,7 @@ class CategoriesViewController: UIViewController {
     }
     
     private func setupTableView() {
-        productTableView.register(ProductsCell.self, forCellReuseIdentifier: cellIdentifier)
+        productTableView.register(ProductCell.self, forCellReuseIdentifier: cellIdentifier)
         productTableView.delegate = self
         productTableView.dataSource = self
     }
@@ -154,16 +154,16 @@ class CategoriesViewController: UIViewController {
 
 
 // MARK: - UITableViewDelegate
-extension CategoriesViewController: UITableViewDelegate {
+extension ProductsInCategoryViewController: UITableViewDelegate {
     // Implement any delegate methods if needed
 }
 
 // MARK: - UITableViewDataSource
-extension CategoriesViewController: UITableViewDataSource {
+extension ProductsInCategoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProductsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProductCell
         let viewModel = productList[indexPath.row]
-        cell.configure(viewModel)
+        cell.configure(with: viewModel)
         return cell
     }
     

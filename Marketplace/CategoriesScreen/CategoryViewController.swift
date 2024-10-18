@@ -78,7 +78,7 @@ extension CategoryViewController: UICollectionViewDelegate {
         let viewModel = categories[indexPath.row]
         print("Selected: \(viewModel.description)")
         
-        let categoriesViewController = CategoriesViewController()
+        let categoriesViewController = ProductsInCategoryViewController()
         categoriesViewController.selectedCategoryTitle = viewModel.description
         categoriesViewController.loadProducts(
             from: baseURL + viewModel.jsonRequest)
