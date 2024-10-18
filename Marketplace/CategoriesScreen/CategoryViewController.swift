@@ -78,11 +78,11 @@ extension CategoryViewController: UICollectionViewDelegate {
         let viewModel = categories[indexPath.row]
         print("Selected: \(viewModel.description)")
         
-        let categoryProductViewController = CategoryProductViewController()
-        categoryProductViewController.categoryTitle = viewModel.description
-        categoryProductViewController.productDownload(
-            urlString: baseURL + viewModel.jsonRequest)
-        navigationController?.pushViewController(categoryProductViewController,
+        let categoriesViewController = CategoriesViewController()
+        categoriesViewController.selectedCategoryTitle = viewModel.description
+        categoriesViewController.loadProducts(
+            from: baseURL + viewModel.jsonRequest)
+        navigationController?.pushViewController(categoriesViewController,
                                                  animated: true)
     }
 }
