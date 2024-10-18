@@ -16,7 +16,7 @@ struct Product {
 }
 
 
-struct CategoryCell {
+struct Category {
     var iconCategory: String
     var description: String
     var jsonRequest: String

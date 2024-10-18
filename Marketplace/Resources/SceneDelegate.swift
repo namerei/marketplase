@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let categoryVC = CategoryViewController()
+        let categoryVC = CategoriesViewController()
         let cartVC = CartViewController()
 
         let navigationController = UINavigationController(rootViewController: categoryVC)

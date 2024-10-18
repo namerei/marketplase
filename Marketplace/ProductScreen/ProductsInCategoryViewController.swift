@@ -172,8 +172,8 @@ extension ProductsInCategoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let productDetailVC = ProductViewController()
-        productDetailVC.product = productList[indexPath.row]
+        let productDetailVC = SelectedProductViewController()
+        productDetailVC.selectedProduct = productList[indexPath.row]
         navigationController?.pushViewController(productDetailVC, animated: true)
     }
 }

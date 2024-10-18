@@ -18,9 +18,9 @@ extension ProductData {
         return NSFetchRequest<ProductData>(entityName: "ProductData")
     }
 
-    @NSManaged public var productImage: Data?
     @NSManaged public var productTitle: String?
     @NSManaged public var productPrice: String?
+    @NSManaged public var productImage: Data?
     @NSManaged public var productDescription: String?
 
 }
