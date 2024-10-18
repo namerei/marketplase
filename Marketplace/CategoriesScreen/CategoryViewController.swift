@@ -9,24 +9,23 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     let baseURL = "https://api.escuelajs.co/api/v1/categories/"
-//    "https://fakestoreapi.com/products/category/\(viewModel.jsonRequest)"
 
     let categories: [CategoryCell] = [
         CategoryCell(iconCategory: "👕",
                      description: "Clothes",
                      jsonRequest: "1/products")
         ,
-        CategoryCell(iconCategory: "👚",
+        CategoryCell(iconCategory: "🪑",
                      description: "Furniture",
                      jsonRequest: "3/products"
                     ),
         CategoryCell(iconCategory: "🖥",
                      description: "Electronics",
                      jsonRequest: "2/products"),
-        CategoryCell(iconCategory: "💎",
+        CategoryCell(iconCategory: "👟",
                      description: "Shoes",
                      jsonRequest: "4/products"),
-        CategoryCell(iconCategory: "🎱",
+        CategoryCell(iconCategory: "🚲",
                      description: "Miscellaneous",
                      jsonRequest: "5/products")
     ]
@@ -34,16 +33,22 @@ class CategoryViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 15
-        layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: (view.frame.width/2) + 100 ,
-                                 height: view.frame.height/6)
-        
+        layout.minimumLineSpacing = 25
+        layout.minimumInteritemSpacing = 10
+
+        // Рассчитываем размер для двух столбцов
+        let numberOfColumns: CGFloat = 2
+        let itemWidth = (view.frame.width - (layout.minimumInteritemSpacing * (numberOfColumns - 1)) - 32) / numberOfColumns
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth * 0.8)
+
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
+        collectionView.showsVerticalScrollIndicator = false
+
         return collectionView
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +60,7 @@ class CategoryViewController: UIViewController {
         collectionView.dataSource = self
         
         view.addSubview(collectionView)
+
         setupView()
     }
 

@@ -24,7 +24,6 @@ class CategoriesCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .black
         label.textAlignment = .center
-        //translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -33,8 +32,9 @@ class CategoriesCell: UICollectionViewCell {
         
         contentView.addSubview(iconCategoryLabel)
         contentView.addSubview(descriptionCategoryLabel)
-        backgroundColor = .systemGray6
-        
+//        backgroundColor = .systemGray6
+        backgroundColor = UIColor(named: "background")
+
         setupView()
         
     }

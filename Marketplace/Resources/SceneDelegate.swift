@@ -43,7 +43,8 @@ class CustomTabBarController: UITabBarController {
         
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(red: 234/255, green: 240/255, blue: 241/255, alpha: 0.9)
+        appearance.backgroundColor =  UIColor(named: "background")?.withAlphaComponent(0.8)
+        
 
         appearance.stackedLayoutAppearance.normal.iconColor = UIColor.systemGray
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemGray]

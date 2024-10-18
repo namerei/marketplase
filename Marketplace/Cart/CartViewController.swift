@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class CartViewController: UIViewController {
-    private let persistentContainer = NSPersistentContainer(name: "Model")
+    private let persistentContainer = NSPersistentContainer(name: "ProductDataStorage")
     let cellID: String = "CartProductCell"
     var productsInCart: [Product] = []
     

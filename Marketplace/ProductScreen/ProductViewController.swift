@@ -52,7 +52,7 @@ class ProductViewController: UIViewController {
         button.setTitle("Add to Cart", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.backgroundColor = .systemCyan
+        button.backgroundColor = UIColor(named: "button")
         button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 12
