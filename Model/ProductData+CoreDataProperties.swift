@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 
+public class ProductData: NSManagedObject {}
+
 
 extension ProductData {
 
