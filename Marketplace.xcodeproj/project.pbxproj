@@ -59,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				5B10E6C829054084000CF9F5 /* Model */,
-				5B02EC5628E4234300124D5B /* Marketplace */,
+				FA17D8262CC2FDBA0012B6BD /* Screens */,
+				FA17D81F2CC2BC720012B6BD /* Resources */,
+				5B02EC6528E4234400124D5B /* Info.plist */,
 				5B02EC5528E4234300124D5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,18 +74,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B02EC5628E4234300124D5B /* Marketplace */ = {
-			isa = PBXGroup;
-			children = (
-				5B9498CF28EF17DA004F01B0 /* Cart */,
-				5BDB690828EC685600CE1D08 /* ProductScreen */,
-				5BDB690728EC683700CE1D08 /* CategoriesScreen */,
-				FA17D81F2CC2BC720012B6BD /* Resources */,
-				5B02EC6528E4234400124D5B /* Info.plist */,
-			);
-			path = Marketplace;
-			sourceTree = "<group>";
-		};
 		5B10E6C829054084000CF9F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,32 +84,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5B9498CF28EF17DA004F01B0 /* Cart */ = {
+		5B9498CF28EF17DA004F01B0 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
 				5BB3847C28E594BC00872490 /* OrdersViewController.swift */,
 				5B9498CD28EF17D6004F01B0 /* OrderCell.swift */,
 			);
-			path = Cart;
+			path = Orders;
 			sourceTree = "<group>";
 		};
-		5BDB690728EC683700CE1D08 /* CategoriesScreen */ = {
+		5BDB690728EC683700CE1D08 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				5B02EC5B28E4234300124D5B /* CategoriesViewController.swift */,
 				5BB3847E28E59DB100872490 /* CategoryCell.swift */,
 			);
-			path = CategoriesScreen;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		5BDB690828EC685600CE1D08 /* ProductScreen */ = {
+		5BDB690828EC685600CE1D08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				5BDB690928EC686800CE1D08 /* ProductsInCategoryViewController.swift */,
 				5BDB690B28EC6C5700CE1D08 /* ProductCell.swift */,
 				5B9498CB28EF0317004F01B0 /* SelectedProductViewController.swift */,
 			);
-			path = ProductScreen;
+			path = Products;
 			sourceTree = "<group>";
 		};
 		FA17D81F2CC2BC720012B6BD /* Resources */ = {
@@ -132,6 +122,16 @@
 				5B02EC6228E4234400124D5B /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA17D8262CC2FDBA0012B6BD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5BDB690728EC683700CE1D08 /* Categories */,
+				5BDB690828EC685600CE1D08 /* Products */,
+				5B9498CF28EF17DA004F01B0 /* Orders */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M5D7V4YFL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marketplace/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Marketplace";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -402,7 +402,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M5D7V4YFL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marketplace/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Marketplace";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
