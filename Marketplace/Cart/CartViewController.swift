@@ -86,7 +86,7 @@ class CartViewController: UIViewController {
         print("FetchedObj \(fetchedResultController.sections?[0].numberOfObjects ?? 99)")
     }
 }
-// MARK: - extenstions
+// MARK: - extensions
 extension CartViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()

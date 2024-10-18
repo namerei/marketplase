@@ -46,6 +46,9 @@ class ProductsCell: UITableViewCell {
             image.heightAnchor.constraint(equalToConstant: 230)
         ])
         
+        image.layer.cornerRadius = 230 / 2
+        image.clipsToBounds = true
+        
         return image
     }()
     
